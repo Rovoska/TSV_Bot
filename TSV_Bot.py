@@ -7,11 +7,9 @@ subreddit = r.get_subreddit("svexchange")
 tsv = '1132'
 
 for submission in subreddit.get_new(limit=1):
-    op_text = submission.selftext
-    tsv_match = any(string in op_text for string in tsv)
-    if submission and tsv_match:
+    if re.search('1132', submission.selftext, re.IGNORECASE):
         print ('Title:'), submission.title
         print ('Body: '), submission.selftext
         print '---------------------------------\n'
-        print ('WHY U NO WORK')
+        
     

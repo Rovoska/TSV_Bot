@@ -13,5 +13,7 @@ for submission in subreddit.get_new(limit=1):
         print ('Title:'), submission.title
         print ('Body: '), submission.selftext
         print '---------------------------------\n'
+    else:
+        print ('Post does not contain 1132, moving on', submission.id)
         
     

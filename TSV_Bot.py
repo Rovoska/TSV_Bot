@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import praw 
+import re
 
 user_agent = ("TSV Bot 0.1")
 r = praw.Reddit(user_agent=user_agent)
